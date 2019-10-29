@@ -20,7 +20,6 @@ const afterMap = [1, 2, 3].myMap(item => {
 console.log(afterMap);
 
 Array.prototype.mySort = function() {
-  // let sorted = [];
   for (let i = 0; i < this.length; i += 1) {
     for (let j = 0; j < this.length - 1; j += 1) {
       if (this[j] > this[j + 1]) {
