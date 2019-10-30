@@ -86,10 +86,10 @@ class Greed {
   search() {
     let maxItem = this.greedRows * this.greedColums;
     while (this.coordinates.length < maxItem) {
-      this.moveRight();
-      this.moveBottom();
-      this.moveLeft();
-      this.moveTop();
+      this.moveRight()
+        .moveBottom()
+        .moveLeft()
+        .moveTop();
     }
   }
 
@@ -99,5 +99,5 @@ class Greed {
   }
 }
 
-const greedQ = new Greed(5, 6, 1, 4);
+const greedQ = new Greed(5, 6, 0, 0);
 greedQ.printResult();
