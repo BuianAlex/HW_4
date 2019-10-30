@@ -1,3 +1,7 @@
+Array.prototype.myPush = function(newdata) {
+  this[this.length] = newdata;
+};
+
 Array.prototype.myForEach = function(callback) {
   for (let i = 0; i < this.length; i += 1) {
     callback(this[i]);
@@ -9,7 +13,7 @@ Array.prototype.myForEach = function(callback) {
 Array.prototype.myMap = function(callback) {
   let result = [];
   for (let i = 0; i < this.length; i += 1) {
-    result.push(callback(this[i]));
+    result.myPush(callback(this[i]));
   }
   return result;
 };
@@ -30,6 +34,7 @@ Array.prototype.mySort = function() {
     }
   }
 };
+
 let testArr = [3, 2, 1, 3];
 testArr.mySort();
 console.log(testArr);
